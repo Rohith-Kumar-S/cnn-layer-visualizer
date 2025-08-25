@@ -119,8 +119,14 @@ class ModelVisualizer:
             self.model_class_str += f"\t\treturn {layers[-2]['id']}\n"
 
             print(self.model_class_str)
-            exec(self.model_class_str)
-            self.model = eval(f"{self.model_name}()")
+            namespace = {}
+            exec(self.model_class_str, namespace)
+
+            # Check if the model exists in namespace
+            if self.model_name not in namespace:
+                raise ValueError(f"Model '{self.model_name}' not found. Available: {list(namespace.keys())}")
+
+            self.model = namespace[self.model_name]()
             
             with torch.no_grad():
                 tensor = torch.from_numpy(img).permute(2, 0, 1) 
