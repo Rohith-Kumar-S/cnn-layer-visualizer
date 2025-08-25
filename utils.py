@@ -119,7 +119,11 @@ class ModelVisualizer:
             self.model_class_str += f"\t\treturn {layers[-2]['id']}\n"
 
             print(self.model_class_str)
-            namespace = {}
+            namespace = {
+            'torch': torch,
+            'nn': torch.nn,
+            '__builtins__': __builtins__
+            }
             exec(self.model_class_str, namespace)
 
             # Check if the model exists in namespace
