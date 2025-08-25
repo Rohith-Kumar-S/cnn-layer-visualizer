@@ -1,4 +1,3 @@
-import tensorflow as tf
 import torch
 from torchsummary import summary
 from classes import Layer, Conv2DParams, MaxPool2DParams
