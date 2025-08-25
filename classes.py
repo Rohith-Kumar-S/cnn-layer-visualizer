@@ -1,4 +1,3 @@
-import tensorflow as tf
 import torch
 from torchsummary import summary
 
