@@ -2,6 +2,6 @@ streamlit
 libgl1
 numpy
 opencv-python-headless
-opencv-contrib-python
+opencv-contrib-python-headless
 torch
 torchsummary
