@@ -35,7 +35,7 @@ cnn-visualizer/
 └── README.md
 ```
 
-## 🎯 Use Cases
+## Use Cases
 
 - **Educational Tool**: Understanding how CNNs process visual information
 - **Model Debugging**: Identifying what features your model learns
@@ -43,7 +43,7 @@ cnn-visualizer/
 - **Interpretability**: Making black-box models more transparent
 - **Feature Engineering**: Understanding which layers capture specific patterns
 
-## 🚧 Roadmap
+## Roadmap
 
 ### Phase 1: Core Features (Completed)
 - Basic layer visualization
